@@ -1,0 +1,27 @@
+1=>> SELECT ename
+     FROM emp
+     WHERE ename IN(SELECT ename
+		    FROM emp
+                    WHERE ename="sudip");
+
+2=>>SELECT ename,esal,edesg,eaddress FROM emp WHERE eaddress="mumbai" AND edesg="Developer";
+
+3=>>SELECT dept_no FROM dept WHERE d_address="hydrabad";
+
+4=>>SELECT ename FROM emp WHERE ename LIKE "%kumar%";
+
+5=>>SELECT esal FROM emp WHERE edesg="sleeper" ORDER BY esal DESC LIMIT 1 OFFSET 1;
+
+6=>>SELECT COUNT(ename) AS ename,eaddress
+	FROM emp
+	WHERE  eaddress="mumbai";
+7=>>
+
+
+8=>>SELECT ename,esal
+FROM emp
+WHERE esal>(SELECT AVG(esal)
+            FROM emp);
+
+9=>>
+10=>>
